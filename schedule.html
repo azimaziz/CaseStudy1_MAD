@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Management System</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="main.dart.js"></script>
+</head>
+<body>
+  <h1 id="output">Schedule Event</h1>
+  <p id="output">Please enter the following information to schedule an event.</p>
+  
+    <form id="scheduleEvent">
+        <label for="personName">Name:</label><br>
+        <input type="text" id="personName" name="personName" required><br><br>
+
+        <label for="eventName">Event Name:</label><br>
+        <input type="text" id="eventName" name="eventName" required><br><br>
+
+        <label for="eventVenue">Venue:</label><br>
+        <select id="eventVenue" name="eventVenue">
+            <option value="Diamond">Diamond</option>
+            <option value="Executive">Executive</option>
+        </select><br><br>
+
+        <label for="date">Date:</label><br>
+        <input type="date" id="date" name="date" required><br><br>
+
+        <label for="time">Time:</label><br>
+        <input type="time" id="time" name="time" min="08:00" max="17:00" name="time" required><br><br>
+
+        <button id="back" onclick="document.location='index.html'">Back</button>
+        <button type="submit" value="Schedule Event">Schedule Event</button>
+    </form>
+
+    <div id="bookingOutput"></div>
+
+
+</body>
+</html>
