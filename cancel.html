@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Management System</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="cancel_event.dart.js"></script>
+
+</head>
+<body>
+  <h1 id="output">Cancel Event</h1>
+  <p id="output">Please enter the following information to cancel an event.</p>
+  
+  <form id="cancelEventForm">
+    <label for="personName">Your Name:</label><br>
+    <input type="text" id="personName" name="personName" required><br><br>
+
+    <label for="date">Date:</label><br>
+    <input type="date" id="date" name="date" required><br><br>
+
+    <button id="back" onclick="document.location='index.html'">Back</button>
+    <button type="submit">Cancel Event</button>
+</form>
+
+</body>
+</html>
