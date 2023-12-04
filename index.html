@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Management System</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="load_events.dart.js"></script>
+</head>
+<body>
+   <div class="header">    
+      <img style="text-align: left;" src="https://image.pngaaa.com/393/23393-middle.png" alt="logo" />
+      <h1 style="display: inline;">INFO 4335: CASE STUDY 1</h1>
+  </div>
+  <br>
+
+  <div class="formBox">
+    <h1 id="output" style="margin-bottom: -2px;">Event Management System</h1>
+  
+  <p id="output">Welcome to the Event Management System. Please select an option below.</p>
+
+  <table class="centered-table">
+    <tr>
+      <th>Name</th>
+      <th>Event</th>
+      <th>Venue</th>
+      <th>Date</th>
+      <th>Time</th>
+    </tr>
+    <!-- Event rows will be added here by the Dart script -->
+  </table>
+  
+  <p id="output">
+    <button id="schedule-event" onclick="document.location='schedule.html'">Schedule Event</button>
+    <button id="check-availability" onclick="document.location='availability.html'">Check Availability</button>
+    <button id="cancel-event" onclick="document.location='cancel.html'">Cancel Event</button>
+  </p>
+  </div>
+  <div class="footer">
+      <ul>
+        <li style="font-size: 20px;">2.5 PIECES</li>
+        <li>|</li>
+        <li>Ahmad Azim</li>
+        <li>Muhammad Haikal Wijdan</li>
+        <li>Afnan Iman</li> 
+      </ul>
+  </div>
+
+</body>
+</html>

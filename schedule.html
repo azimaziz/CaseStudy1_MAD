@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Management System</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="main.dart.js"></script>
+</head>
+<body>
+
+  <div class="header">    
+    <img style="text-align: left;" src="https://image.pngaaa.com/393/23393-middle.png" alt="logo" />
+    <h1 style="display: inline;">INFO 4335: Case Study 1</h1>
+  </div>
+  <br>
+
+  <div class="formBox">
+
+  <h1 id="output" style="margin-bottom: -2px;">Schedule Event</h1>
+  <p id="output">Please enter the following information to schedule an event.</p>
+  
+    <form id="scheduleEvent">
+        <label for="personName">Name:</label><br>
+        <input type="text" id="personName" name="personName" pattern="[A-Za-z\s]+" title="Only letters and spaces are allowed" required><br><br>
+
+        <label for="eventName">Event Name:</label><br>
+        <input type="text" id="eventName" name="eventName" required><br><br>
+
+        <label for="eventVenue">Venue:</label><br>
+        <select id="eventVenue" name="eventVenue">
+            <option value="Diamond">Diamond</option>
+            <option value="Executive">Executive</option>
+        </select><br><br>
+
+        <label for="date">Date:</label><br>
+        <input type="date" id="date" name="date" min="TODAY'S DATE" required><br><br>
+
+        <label for="time">Time:</label><br>
+        <input type="time" id="time" name="time" min="08:00" max="17:00" name="time" required><br><br>
+
+        <button id="back" onclick="document.location='index.html'">Back</button>
+        <button type="submit" value="Schedule Event">Schedule Event</button>
+    </form>
+
+     <div id="bookingOutput" style="background-color: antiquewhite; border-radius: 4px;"></div>
+
+  </div>
+  <div class="footer">
+    <ul>
+      <li style="font-size: 20px;">2.5 PIECES</li>
+      <li>|</li>
+      <li>Ahmad Azim</li>
+      <li>Muhammad Haikal Wijdan</li>
+      <li>Afnan Iman</li> 
+    </ul>
+  </div>
+</body>
+</html>
