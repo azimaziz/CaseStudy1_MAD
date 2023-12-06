@@ -11,7 +11,7 @@ Group members:
   Assigned tasks:
   - Azim Aziz: create check availability page and function (availability.html & check_availability.dart)
                 create and implement css file to html files
-  - Haikal wijdan: worked on scheduling events (schedule.html) by using Dart:HTML Local Storage
+  - Haikal wijdan: worked on scheduling events (schedule.html & main.dart) by using Dart:HTML Local Storage
                    Ensure that events scheduled aren't clashing with one another
   - Afnan Iman bin Azman: work on cancel.html, cancel_event.dart (function to cancel events)
                           work on loadevent.dart (display table of events)
