@@ -49,12 +49,12 @@ bool isVenueAvailable(String venue, String date) {
 
 void displayConfirmation(Map<String, String> formData) {
   var confirmationMessage = 'Event successfully booked for ${formData['personName']} for the event ${formData['eventName']} at the venue ${formData['eventVenue']} on ${formData['date']} at ${formData['time']}';
-  querySelector('#bookingOutput')?.text = confirmationMessage; // Ensure you have an element with id 'bookingOutput'
+  querySelector('#bookingOutput')?.text = confirmationMessage;
 }
 
 void displayVenueBookedMessage(String venue, String date) {
   var message = 'The venue $venue is already booked on $date.';
-  querySelector('#bookingOutput')?.text = message; // Ensure you have an element with id 'bookingOutput'
+  querySelector('#bookingOutput')?.text = message; 
 }
 
 void saveEvent(Map<String, String> event) {
