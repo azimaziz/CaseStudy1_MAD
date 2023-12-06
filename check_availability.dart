@@ -1,6 +1,7 @@
 import 'dart:html';
 import 'dart:convert';
 
+//Azim Aziz 2014781
 void main() {
   var form1 = querySelector('#availabilityForm') as FormElement;
   form1.onSubmit.listen((Event e) {
@@ -9,11 +10,12 @@ void main() {
     var selectedVenue = (querySelector('#venue') as SelectElement).value ?? '';
     var selectedDate = (querySelector('#date') as InputElement).value ?? '';
 
-    clearTable();
+    clearTable();//clear table each submission
     checkAvailability(selectedVenue, selectedDate);
   });
 }
 
+//Taken from main.dart (haikal's)
 void checkAvailability(String venue, String date) {
   var storedEvents = window.localStorage['events'];
   bool isAvailable = true;
@@ -31,16 +33,17 @@ void checkAvailability(String venue, String date) {
     }
   }
 
-  // Display the availability status
+  // Display the availability text
   var outputElement = querySelector('#availabilityOutput') as DivElement;
   if (isAvailable) {
     outputElement.text = 'The venue $venue is available on $date.';
   } else {
     outputElement.text = 'The venue $venue is booked on $date.';
-    loadEvents(venue, date);
+    loadEvents(venue, date); // display suggestion table
   }
 }
 
+//clear table each submission
 void clearTable() {
   var table = querySelector('.centered-table') as TableElement;
   var rows = table.rows;
@@ -52,6 +55,7 @@ void clearTable() {
   outputElement.text = '';
 }
 
+//calculate the 3 days before & after selected date
 void loadEvents(venue, date) {
   var outputElement = querySelector('#suggestText') as DivElement;
   outputElement.text = 'These are the schedule for venue $venue 3 days before & after $date.';
@@ -59,14 +63,15 @@ void loadEvents(venue, date) {
   for (int i = 3; i >= 1; i--) {
     var previousDate = DateTime.parse(date).subtract(Duration(days: i)).toString();
     buildTable(venue, previousDate);
-  }
+  }//3 days before
 
   for (int i = 1; i <= 3; i++) {
     var nextDate = DateTime.parse(date).add(Duration(days: i)).toString();
     buildTable(venue, nextDate);
   }
-}
+}//3 days after
 
+//create suggestion table 3 day before & after selected date
 void buildTable(venue, newDate) {
   var storedEvents = window.localStorage['events'];
   var table = querySelector('.centered-table') as TableElement;
